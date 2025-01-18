@@ -1,0 +1,15 @@
+{
+    "clinical_notes_directory": "/PHShome/bg615/FE5/EHR Notes",
+    "num_folders": 40,
+    "patient_id_column_name": "PATIENT_NUM",
+    "encounter_id_column_name": "ENCOUNTER_NUM",
+    "note_id_column_name": "COLUMN_1",
+    "note_date_column_name": "UPDATE_DATE",
+    "provider_id_column_name": "PROVIDER_ID",
+    "note_text_column_name": "OBSERVATION_BLOB",
+    "preprocess_process": 40,
+    "UMLS_username": "",
+    "UMLS_password": "",
+    "UMLS_API_key": "",
+    "cTAKES_process": 40
+}
