@@ -115,14 +115,18 @@ The following log files will be generated during the execution of the pipeline, 
 ## Run cATKES in parallel
 
 **The pipeline already implemented parallel execution of cTAKES, see [Step 2 - Run cTAKES.sh](./Step%202%20-%20Run%20cTAKES.sh) for details.**
+
 The shell script does the following:
-•	Copy the original cTAKES source folder `$PROCESS` times, where $PROCESS is the number of processes you want to execute in parallel and is defined in `config.json`. The reason that we need to copy the original cTAKES source folder many times is that if we only use a single cTAKES source folder, the first process will place a lock on the source folder, which prevent other process from using it. As a result, all processes need to use different cTAKES source folder.
-•	The code will use cTAKES source folder `apache-ctakes-4.0.0.1_X` to annotate all text in `Input/Input_X`, and output in `Output/Output_X`, where `X` is an integer range from `1` to `$PROCESS` (inclusive)
+
+*	Copy the original cTAKES source folder `$PROCESS` times, where $PROCESS is the number of processes you want to execute in parallel and is defined in `config.json`. The reason that we need to copy the original cTAKES source folder many times is that if we only use a single cTAKES source folder, the first process will place a lock on the source folder, which prevent other process from using it. As a result, all processes need to use different cTAKES source folder.
+*	The code will use cTAKES source folder `apache-ctakes-4.0.0.1_X` to annotate all text in `Input/Input_X`, and output in `Output/Output_X`, where `X` is an integer range from `1` to `$PROCESS` (inclusive)
 
 If you just want to run cTAKES in parallel to annotate the notes instead of excuting the whole pipeline, use the following command:
+
 `chmod 777 Step\2\-\Run\cTAKES.sh`
 `nohup bash Step\2\-\Run\cTAKES.sh > Step\2\-\Run\cTAKES.log 2>&1`
-After executing the code above, you will see that “Output/Output_X” will have the annotation result of all text files in “Input/Input_X”, and “A.txt” in “Input/Input_X” will have the corresponding “A.txt.xmi” in “Output/Output_X”
+
+After executing the code above, you will see that `Output/Output_X` will have the annotation result of all text files in `Input/Input_X`, and `A.txt` in `Input/Input_X` will have the corresponding `A.txt.xmi` in `Output/Output_X`.
 
 
 ## Auxiliary Tools
