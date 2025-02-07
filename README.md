@@ -125,7 +125,7 @@ If you just want to run cTAKES in parallel to annotate the notes instead of excu
 
 `chmod 777 Step\2\-\Run\cTAKES.sh`
 
-`nohup bash Step\2\-\Run\cTAKES.sh > Step\2\-\Run\cTAKES.log 2>&1`
+`nohup bash Step\2\-\Run\cTAKES.sh > Step\2\-\Run\cTAKES.log 2>&1 &`
 
 After executing the code above, you will see that `Output/Output_X` will have the annotation result of all text files in `Input/Input_X`, and `A.txt` in `Input/Input_X` will have the corresponding `A.txt.xmi` in `Output/Output_X`.
 
