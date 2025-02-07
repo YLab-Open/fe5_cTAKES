@@ -26,7 +26,9 @@ The setup process is completed in the following 3 steps.
 
 ### Step 2: Place the cTAKES folder
 
-Unzip `apache-ctakes-4.0.0.1-bin.tar.gz` and put the `apache-ctakes-4.0.0.1` folder (it is inside the unzipped `apache-ctakes-4.0.0.1-bin` folder) under the **same directory** as `run_all.sh`. **IMPORTANT: Please make sure that you put the `apache-ctakes-4.0.0.1` folder within `apache-ctakes-4.0.0.1-bin` instead of `apache-ctakes-4.0.0.1-bin` itself under the same directory as `run_all.sh`**
+Unzip `apache-ctakes-4.0.0.1-bin.tar.gz` and put the `apache-ctakes-4.0.0.1` folder (it is inside the unzipped `apache-ctakes-4.0.0.1-bin` folder) under the **same directory** as `run_all.sh`. 
+
+**IMPORTANT: Please make sure that you put the `apache-ctakes-4.0.0.1` folder within `apache-ctakes-4.0.0.1-bin` instead of `apache-ctakes-4.0.0.1-bin` itself under the same directory as `run_all.sh`**
 
 ### Step 3: Setup `config.json`
 
