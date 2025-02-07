@@ -1,6 +1,6 @@
 ## Overview
 
-The obesity and the substance abuse pipeline use cTAKES to annotate the clinical notes. This pipeline consistes of the following 3 parts:
+The obesity and the substance abuse pipeline uses cTAKES to annotate the clinical notes. This pipeline consistes of the following 3 parts:
 * `Step 1 - Prepare Input.py`: Process the `csv` files that contains the clinical notes. Save each piece of clinical note as a `txt` file, and evenly distribute the files into `num_folders` input folders at `./Input`.
 * `Step 2 - Run cTAKES.sh`: Use cTAKES to process the clinical notes stored in each input folder, and save the processed file (in `xmi` format) into `num_folders` output folders at `./Output`.
 * `Step 3 - Process Output.py`: Process the output `xmi` files and generate the FE feature table (`fe_feature_detail_table_obesity.csv`, `fe_feature_detail_table_substance_abuse.csv`, `fe_feature_table_obesity.csv`, and `fe_feature_table_substance_abuse.csv`).
