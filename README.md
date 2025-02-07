@@ -50,7 +50,11 @@ To run the obesity and the substance abuse pipeline. You need to specify your va
 
 ## Execution
 
-After setting up `config.json`, simply execute `nohup ./run_all.sh > output.log 2>&1 &`, and you will find your results (the FE feature tables) under the same directory of `run_all.sh` after the pipeline finishes.
+After setting up `config.json`, simply execute
+```yaml
+`nohup ./run_all.sh > output.log 2>&1 &`
+```
+and you will find your results (the FE feature tables) under the same directory of `run_all.sh` after the pipeline finishes.
 
 ## Example
 
@@ -125,9 +129,10 @@ The shell script does the following:
 
 If you just want to run cTAKES in parallel to annotate the notes instead of excuting the whole pipeline, use the following command:
 
+```yaml
 `chmod 777 Step\2\-\Run\cTAKES.sh`
-
 `nohup bash Step\2\-\Run\cTAKES.sh > Step\2\-\Run\cTAKES.log 2>&1 &`
+```
 
 After executing the code above, you will see that `Output/Output_X` will have the annotation result of all text files in `Input/Input_X`, and `A.txt` in `Input/Input_X` will have the corresponding `A.txt.xmi` in `Output/Output_X`.
 
