@@ -178,5 +178,6 @@ After executing the code above, you will see that `Output/Output_X` will have th
 ## Auxiliary Tools
 
 There are two auxiliary shell scripts that help you check the correctness of the pipeline.
+
 *   `./count_txt.sh`: Helps count the number of `txt` files within `./Input`. You may run this script during or after Step 1 to check the progress and see if the total number of `txt` files generated equals the total number of clinical notes that you want to process.
 *   `./count_xmi.sh`: Helps count the number of `xmi` files within `./Output`. You may run this script during or after Step 2 to check the progress and see if the total number of `xmi` files generated equals the total number of clinical notes that you want to process.
