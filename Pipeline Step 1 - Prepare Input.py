@@ -66,14 +66,14 @@ def main(config_path="config.json"):
     config = load_config(config_path)
 
     clinical_notes_dir = config["clinical_notes_directory"]
-    num_folders = config["num_folders"]
     patient_id_col = config["patient_id_column_name"]
     encounter_id_col = config["encounter_id_column_name"]
     note_id_col = config["note_id_column_name"]
     note_date_col = config["note_date_column_name"]
     provider_id_col = config["provider_id_column_name"]
     note_text_col = config["note_text_column_name"]
-    num_processes = min(cpu_count(), config["preprocess_process"])
+    num_processes = config["num_processes"]
+    num_folders = num_processes
 
     input_main_folder = "Input"
     os.makedirs(input_main_folder, exist_ok=True)
@@ -99,6 +99,8 @@ def main(config_path="config.json"):
         # Use tqdm with `imap_unordered` for better progress tracking
         for _ in tqdm(pool.imap_unordered(process_filtered_csv, args), total=len(args), desc="Processing CSV files", unit="file"):
             pass  # tqdm automatically updates progress
+
+    print(f"All {num_processes} processes have finished processing the input. Pipeline Step 1 complete.")
 
 if __name__ == "__main__":
     main()

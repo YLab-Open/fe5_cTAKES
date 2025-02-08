@@ -7,4 +7,4 @@ TARGET_DIR="./Output"
 CSV_COUNT=$(find "$TARGET_DIR" -type f -name "*.xmi" | wc -l)
 
 # Output the result
-echo "Total number of XMI files: $CSV_COUNT"
+echo "Total number of processed XMI files: $CSV_COUNT"

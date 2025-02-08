@@ -12,7 +12,7 @@ USER=$(jq -r '.UMLS_username' "$CONFIG_FILE")
 PASS=$(jq -r '.UMLS_password' "$CONFIG_FILE")
 KEY=$(jq -r '.UMLS_API_key' "$CONFIG_FILE")
 PROCESS=$(jq -r '.cTAKES_process' "$CONFIG_FILE")
-INPUT="./Input"
+INPUT="./Input_chunk"
 OUTPUT="./Output"
 
 # Record the start time
@@ -91,7 +91,7 @@ end_time=$(date +%s)
 # Calculate the total execution time in seconds
 execution_time=$((end_time - start_time))
 
-echo "All processes have completed."
+echo "All processes have completed cTAKES annotation. Pipeline Step 3 complete."
 echo "Total execution time: ${execution_time} seconds."
 
 

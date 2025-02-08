@@ -7,4 +7,4 @@ TARGET_DIR="./Input"
 CSV_COUNT=$(find "$TARGET_DIR" -type f -name "*.txt" | wc -l)
 
 # Output the result
-echo "Total number of TXT files: $CSV_COUNT"
+echo "Total number of TXT files to be processed: $CSV_COUNT"
