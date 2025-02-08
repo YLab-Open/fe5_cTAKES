@@ -156,7 +156,7 @@ The `fe_feature_table_obesity.csv` and `fe_feature_table_substance_abuse.csv` wi
 
 Every pipeline and post processing script will have its own log files created, which contains progress information or error messages. Please refer to individual log files for details.
 
-## Run cATKES in parallel
+## Run cTAKES in parallel
 
 **The pipeline already implemented parallel execution of cTAKES, see [Pipeline Step 3 - Run cTAKES.sh](Pipeline%20Step%203%20-%20Run%20cTAKES.sh) for details.**
 
