@@ -63,18 +63,18 @@ Unzip `apache-ctakes-4.0.0.1-bin.tar.gz` and put the `apache-ctakes-4.0.0.1` fol
 
 To run the obesity and the substance abuse pipeline. You need to specify your variables in [config.json](./config.json). Some fields are already pre-filled to serve as an example. Below is a detailed explanation about what each variable refers to.
 
-`clinical_notes_directory`: The **directory** that stores the clinical notes that need to be processed. The clinical notes must be stored in `csv` format, but there can be multiple `csv` files.
-`patient_id_column_name`: The name of the column in the `csv` file that contains the **patient ID**.
-`encounter_id_column_name`: The name of the column in the `csv` file that contains the **encounter ID**.
-`note_id_column_name`: The name of the column in the `csv` file that contains the **note ID**.
-`note_date_column_name`: The name of the column in the `csv` file that contains the **note date**.
-`provider_id_column_name`: The name of the column in the `csv` file that contains the **provider ID**.
-`note_text_column_name`: The name of the column in the `csv` file that contains the **note text**.
-`num_processes`: The **number of processes** to create to run the pipeline. **Note: This is also the number of subfolders to be created for the input and the output.** The **number of cTAKES processes** is also represented by this number.
-`note_chunk_size_bytes`: The size (in bytes) of each chunk of the input clinical notes. **Please make this number no larger than 10240 (10KB)** as we have found that the cTAKES annotation speed will drop significant or even completely stucked when your chunk size is too large.
-`UMLS_username`: Your [UMLS](https://www.nlm.nih.gov/research/umls/index.html) username.
-`UMLS_assword`: Your [UMLS](https://www.nlm.nih.gov/research/umls/index.html) password.
-`UMLS_API_key`: Your [UMLS](https://www.nlm.nih.gov/research/umls/index.html) API key, which can be found at your [UMLS profile](https://uts.nlm.nih.gov/uts/profile) after you log in.
+* `clinical_notes_directory`: The **directory** that stores the clinical notes that need to be processed. The clinical notes must be stored in `csv` format, but there can be multiple `csv` files.
+* `patient_id_column_name`: The name of the column in the `csv` file that contains the **patient ID**.
+* `encounter_id_column_name`: The name of the column in the `csv` file that contains the **encounter ID**.
+* `note_id_column_name`: The name of the column in the `csv` file that contains the **note ID**.
+* `note_date_column_name`: The name of the column in the `csv` file that contains the **note date**.
+* `provider_id_column_name`: The name of the column in the `csv` file that contains the **provider ID**.
+* `note_text_column_name`: The name of the column in the `csv` file that contains the **note text**.
+* `num_processes`: The **number of processes** to create to run the pipeline. **Note: This is also the number of subfolders to be created for the input and the output.** The **number of cTAKES processes** is also represented by this number.
+* `note_chunk_size_bytes`: The size (in bytes) of each chunk of the input clinical notes. **Please make this number no larger than 10240 (10KB)** as we have found that the cTAKES annotation speed will drop significant or even completely stucked when your chunk size is too large.
+* `UMLS_username`: Your [UMLS](https://www.nlm.nih.gov/research/umls/index.html) username.
+* `UMLS_assword`: Your [UMLS](https://www.nlm.nih.gov/research/umls/index.html) password.
+* `UMLS_API_key`: Your [UMLS](https://www.nlm.nih.gov/research/umls/index.html) API key, which can be found at your [UMLS profile](https://uts.nlm.nih.gov/uts/profile) after you log in.
 
 ## Execution
 
