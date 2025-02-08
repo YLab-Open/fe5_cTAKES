@@ -158,7 +158,7 @@ Every pipeline and post processing script will have its own log files created, w
 
 ## Run cATKES in parallel
 
-**The pipeline already implemented parallel execution of cTAKES, see [Step 3 - Run cTAKES.sh](./Step%203%20-%20Run%20cTAKES.sh) for details.**
+**The pipeline already implemented parallel execution of cTAKES, see [Pipeline Step 3 - Run cTAKES.sh](Pipeline%20Step%203%20-%20Run%20cTAKES.sh) for details.**
 
 Specifically, the shell script does the following:
 
