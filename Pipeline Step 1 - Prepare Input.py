@@ -20,8 +20,8 @@ def remove_invalid_xml_chars(text):
 
     return ''.join(c if valid_xml_10_re.match(c) else ' ' for c in text)
 
-def process_filtered_csv(args):
-    """Processes a single filtered CSV file and saves rows as text files in designated folders."""
+def process_csv(args):
+    """Processes a single CSV file and saves rows as text files in designated folders."""
     input_file, num_folders, patient_id_col, encounter_id_col, note_id_col, note_date_col, provider_id_col, note_text_col = args
 
     try:
@@ -87,8 +87,8 @@ def main(config_path="config.json"):
     for i in range(1, num_folders + 1):
         os.makedirs(os.path.join(output_main_folder, f"Output_{i}"), exist_ok=True)
 
-    csv_files = sorted([os.path.join(clinical_notes_dir, f) for f in os.listdir(clinical_notes_dir) if f.endswith("(Filtered).csv")])
-    print(f"Found {len(csv_files)} filtered CSV files.")
+    csv_files = sorted([os.path.join(clinical_notes_dir, f) for f in os.listdir(clinical_notes_dir) if f.endswith(".csv")])
+    print(f"Found {len(csv_files)} CSV files.")
 
     args = [
         (file, num_folders, patient_id_col, encounter_id_col, note_id_col, note_date_col, provider_id_col, note_text_col)
@@ -97,7 +97,7 @@ def main(config_path="config.json"):
 
     with Pool(processes=num_processes) as pool:
         # Use tqdm with `imap_unordered` for better progress tracking
-        for _ in tqdm(pool.imap_unordered(process_filtered_csv, args), total=len(args), desc="Processing CSV files", unit="file"):
+        for _ in tqdm(pool.imap_unordered(process_csv, args), total=len(args), desc="Processing CSV files", unit="file"):
             pass  # tqdm automatically updates progress
 
     print(f"All {num_processes} processes have finished processing the input. Pipeline Step 1 complete.")
