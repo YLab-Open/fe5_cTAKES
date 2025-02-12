@@ -11,7 +11,7 @@ fi
 USER=$(jq -r '.UMLS_username' "$CONFIG_FILE")
 PASS=$(jq -r '.UMLS_password' "$CONFIG_FILE")
 KEY=$(jq -r '.UMLS_API_key' "$CONFIG_FILE")
-PROCESS=$(jq -r '.cTAKES_process' "$CONFIG_FILE")
+PROCESS=$(jq -r '.num_processes' "$CONFIG_FILE")
 INPUT="./Input_chunk"
 OUTPUT="./Output"
 
