@@ -145,9 +145,9 @@ def process_output_folder(folder_index):
                 patient_id,         # PatID
                 encounter_id,       # EncounterID
                 note_id,            # NoteID
-                "C0028754",         # FeatureID for obesity
+                1004,               # FeatureID for obesity
                 note_date,          # Feature_dt
-                "Obesity",          # Feature
+                "C0028754",         # Feature
                 "UC",               # FE_CodeType
                 provider_id,        # ProviderID
                 "N",                # Confidence
@@ -165,9 +165,9 @@ def process_output_folder(folder_index):
                 patient_id,         # PatID
                 encounter_id,       # EncounterID
                 note_id,            # NoteID
-                "C0740858",         # FeatureID for substance abuse
+                1005,               # FeatureID for substance abuse
                 note_date,          # Feature_dt
-                "Substance Abuse",  # Feature
+                "C0740858",         # Feature
                 "UC",               # FE_CodeType
                 provider_id,        # ProviderID
                 "N",                # Confidence

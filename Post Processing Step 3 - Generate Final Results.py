@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from datetime import date
 
 def main():
     feature_list = ["obesity", "substance_abuse"]
@@ -23,6 +24,47 @@ def main():
 
         df.to_csv(f"fe_feature_table_{feature}.csv", index=False)
         print(f"Saved fe_feature_table_{feature}.csv")
+
+    # Generate the pipeline information for FeatureID
+    id = 1004
+    name = "cTAKES pipeline - obesity"
+    version = "1.0.0"
+    run_date = date.today()
+    description = "Regular expression-based pipeline to extract obesity-related features from clinical notes using cTAKES."
+    source = "https://github.com/YLab-Open/fe5_cTAKES"
+
+    featureid_df = pd.DataFrame({
+        'FeatureID': [id],
+        'Feature': [name],
+        'Version': [version],
+        'Run_Date': [run_date],
+        'Description': [description],
+        'Source': [source]
+    })
+
+    featureid_df_output_file = "fe_pipeline_table_obesity.csv"
+    featureid_df.to_csv(featureid_df_output_file, index=False)
+    print("Pipeline information CSV saved to:", featureid_df_output_file)
+
+    id = 1005
+    name = "cTAKES pipeline - substance_abuse"
+    version = "1.0.0"
+    run_date = date.today()
+    description = "Regular expression-based pipeline to extract substance abuse-related features from clinical notes using cTAKES."
+    source = "https://github.com/YLab-Open/fe5_cTAKES"
+
+    featureid_df = pd.DataFrame({
+        'FeatureID': [id],
+        'Feature': [name],
+        'Version': [version],
+        'Run_Date': [run_date],
+        'Description': [description],
+        'Source': [source]
+    })
+
+    featureid_df_output_file = "fe_pipeline_table_substance_abuse.csv"
+    featureid_df.to_csv(featureid_df_output_file, index=False)
+    print("Pipeline information CSV saved to:", featureid_df_output_file)
 
     print("Final results generated for both obesity and substance abuse. Final results saved as fe_feature_table_obesity.csv and fe_feature_table_substance_abuse.csv. Post Processing Step 3 complete.")
 
